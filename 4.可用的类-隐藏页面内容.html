@@ -1,0 +1,61 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-09-25 09:53:43
+ * @LastEditTime: 2020-09-25 15:33:11
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \bootstrap使用\2.模拟布局容器改变宽度.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐藏页面内容</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            color: aqua;
+            margin:auto;
+        }
+        @media screen and (max-width: 767px){
+        .container{
+            width: 100%;
+        }
+        .hidden-xs{
+            display: none;
+        }
+        }
+        @media screen and (min-width: 768px) and (max-width: 991px){
+        .container{
+            width: 750px;
+        }
+        .hidden-sm{
+            display: none;
+        }
+        }
+        @media screen and (min-width: 992px) and (max-width: 1199px){
+        .container{
+            width: 970px;
+        }
+        .hidden-md{
+            display: none;
+        }
+        }
+        @media screen and (min-width: 1200px){
+        .container{
+            width: 1170px;
+        }
+        .hidden-lg{
+            display: none;
+        }
+        }  
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+</body>
+</html>

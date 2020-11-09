@@ -1,0 +1,48 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-09-25 09:53:43
+ * @LastEditTime: 2020-09-25 10:17:45
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \bootstrap使用\2.模拟布局容器改变宽度.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模拟布局容器</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            color: aqua;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+</body>
+<script>
+    ''(function(win,doc){
+        var container=doc.querySelector('container')
+        function resize(){
+        var width=document.body.clientWidth||document.documentElement.clientWidth;
+        if(width>=1200){
+            container.style.width = '1170px';
+        }
+        else if(width >=992){
+            container.style.width = '970px';
+        }
+        else if(width >=768){
+            container.style.width = '750px';
+        }else{
+            container.style.width = '100%';
+        }
+    }
+    })(window,document)
+</script>
+</html>
